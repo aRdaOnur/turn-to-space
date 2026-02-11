@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpaayf7u45enw"]
+
+[ext_resource type="Script" uid="uid://yqo0ywbp8ok2" path="res://scripts/player.gd" id="1_yswdg"]
+[ext_resource type="Texture2D" uid="uid://clgw5yo83a0os" path="res://Assets/SpaceShips/Ship_3.png" id="2_4mvsu"]
+[ext_resource type="AudioStream" uid="uid://b2hnf7uqkmv45" path="res://Assets/sounds/pickup-sound.mp3" id="3_dejxa"]
+[ext_resource type="AudioStream" uid="uid://4v7dcxo3yhra" path="res://Assets/sounds/keremThank.mp3" id="4_2hvok"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13hro"]
+radius = 20.0
+height = 140.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mvsu"]
+radius = 22.0
+height = 148.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_yswdg")
+
+[node name="Spaceship2" type="Sprite2D" parent="."]
+z_index = 1
+scale = Vector2(5, 5)
+texture = ExtResource("2_4mvsu")
+
+[node name="FireRateTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_13hro")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5702605
+shape = SubResource("CapsuleShape2D_4mvsu")
+
+[node name="PickUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dejxa")
+
+[node name="ThankYou" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2hvok")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.6, 0.6)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -3543.0
+offset_top = -3445.0
+offset_right = -3048.6987
+offset_bottom = -3314.6187
+scale = Vector2(14.371807, 52.137524)
+color = Color(0, 0, 0, 1)
+
+[node name="HealthBarContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="HealthBar" type="ProgressBar" parent="HealthBarContainer"]
+unique_name_in_owner = true
+self_modulate = Color(1.0588765e-06, 0.8718808, 0.50250036, 1)
+offset_left = -67.0
+offset_top = 84.00001
+offset_right = 68.0
+offset_bottom = 111.00001
+scale = Vector2(0.9894911, 0.41141832)
+value = 100.0
+show_percentage = false
+
+[connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

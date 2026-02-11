@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdkbpywsj4nar"]
+
+[ext_resource type="Texture2D" uid="uid://soyjawfhl2ag" path="res://Assets/Explosion/shock_wave_single.png" id="1_ip3s4"]
+[ext_resource type="Script" uid="uid://btf82442aljcc" path="res://scripts/shock_wave.gd" id="2_m3ck2"]
+
+[sub_resource type="Curve" id="Curve_ip3s4"]
+_data = [Vector2(0, 0), 0.0, 1.3288546, 0, 0, Vector2(0.9742646, 1), 1.3496184, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3ck2"]
+
+[node name="ShockWave" type="Area2D"]
+script = ExtResource("2_m3ck2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 1
+texture = ExtResource("1_ip3s4")
+lifetime = 3.0
+local_coords = true
+gravity = Vector2(0, 0)
+scale_amount_min = 20.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_ip3s4")
+color = Color(1, 1, 1, 0.3647059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m3ck2")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

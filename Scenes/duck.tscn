@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://3yyopko6f4el"]
+
+[ext_resource type="Texture2D" uid="uid://bmek2mhcuf6wy" path="res://Assets/duck.png" id="1_jhtpm"]
+[ext_resource type="Script" uid="uid://vid1ned8jean" path="res://scripts/duck.gd" id="1_tvw4f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvw4f"]
+radius = 79.0
+height = 184.0
+
+[node name="Duck" type="CharacterBody2D"]
+z_index = 4
+scale = Vector2(0.3963061, 0.3963061)
+collision_mask = 128
+script = ExtResource("1_tvw4f")
+
+[node name="Duck" type="Sprite2D" parent="."]
+scale = Vector2(0.47633144, 0.47633144)
+texture = ExtResource("1_jhtpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_tvw4f")

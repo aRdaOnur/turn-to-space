@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b773bo6137giv"]
+
+[ext_resource type="Script" uid="uid://bwwad2hgjwi15" path="res://Scenes/iron_asteroid.gd" id="1_l45m2"]
+[ext_resource type="Texture2D" uid="uid://dehvqm55c5erd" path="res://Assets/asteroid-2.png" id="2_l45m2"]
+[ext_resource type="AudioStream" uid="uid://lelvjv28k4o4" path="res://Assets/sounds/pop-402323.mp3" id="3_7qqpy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rvlwq"]
+radius = 114.3582
+
+[node name="IronAsteroid" type="CharacterBody2D"]
+position = Vector2(-1.9073486e-06, 3.8146973e-06)
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("1_l45m2")
+
+[node name="Asteroid2" type="Sprite2D" parent="."]
+position = Vector2(6.67572e-06, -16.326492)
+scale = Vector2(11.775475, 11.775475)
+texture = ExtResource("2_l45m2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.163231, -4.081635)
+shape = SubResource("CircleShape2D_rvlwq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 35.0
+one_shot = true
+autostart = true
+
+[node name="GetDamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7qqpy")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

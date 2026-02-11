@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bapvh2dfts86g"]
+
+[ext_resource type="Script" uid="uid://cw3duvr1sj18g" path="res://Scenes/heavy_ball.gd" id="1_7c47c"]
+[ext_resource type="Texture2D" uid="uid://bebau5e5wv13r" path="res://Assets/heavy-ball.png" id="1_r5fe8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hvdeo"]
+
+[node name="HeavyBall" type="CharacterBody2D"]
+modulate = Color(1, 0.4627451, 1, 1)
+scale = Vector2(1.6341736, 1.6341736)
+script = ExtResource("1_7c47c")
+
+[node name="HeavyBall" type="Sprite2D" parent="."]
+scale = Vector2(0.23319532, 0.23319532)
+texture = ExtResource("1_r5fe8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+scale = Vector2(2.0257943, 2.0454938)
+shape = SubResource("CircleShape2D_hvdeo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://bpsgsu5tyu74h"]
+
+[ext_resource type="Script" uid="uid://drloio4smipai" path="res://scripts/gold_coin.gd" id="1_yjxst"]
+[ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="2_yjxst"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avxfu"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvte2"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsvdh"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysxt4"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80e7u"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac8xn"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xve27"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67ntk"]
+atlas = ExtResource("2_yjxst")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ac8xn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avxfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvte2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsvdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysxt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80e7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac8xn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xve27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67ntk")
+}],
+"loop": true,
+"name": &"gold",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjxst"]
+
+[node name="GoldCoin" type="CharacterBody2D"]
+scale = Vector2(1.2168353, 1.24)
+script = ExtResource("1_yjxst")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 0
+scale = Vector2(2.0847802, 2.0847802)
+sprite_frames = SubResource("SpriteFrames_ac8xn")
+animation = &"gold"
+autoplay = "gold"
+frame_progress = 0.48325524
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0109999999999997
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yjxst")

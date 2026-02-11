@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://cy7wlch2ncqhq"]
+
+[ext_resource type="Script" uid="uid://yqo0ywbp8ok2" path="res://scripts/player.gd" id="1_eymce"]
+[ext_resource type="Texture2D" uid="uid://cleh6twolnwbi" path="res://Assets/SpaceShips/Ship_1.png" id="2_yw3yc"]
+[ext_resource type="AudioStream" uid="uid://b2hnf7uqkmv45" path="res://Assets/sounds/pickup-sound.mp3" id="3_647no"]
+[ext_resource type="AudioStream" uid="uid://4v7dcxo3yhra" path="res://Assets/sounds/keremThank.mp3" id="4_tq0o6"]
+[ext_resource type="Script" uid="uid://d20ohk485mxc4" path="res://scripts/orbital_pivot.gd" id="5_7eign"]
+[ext_resource type="PackedScene" uid="uid://d01ex73lc6orl" path="res://Scenes/rocket_animation.tscn" id="5_yw3yc"]
+[ext_resource type="PackedScene" uid="uid://bapvh2dfts86g" path="res://Scenes/heavy_ball.tscn" id="6_bdmsg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovn01"]
+radius = 10.664175
+height = 86.53136
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eymce"]
+height = 73.26199
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 129
+collision_mask = 2
+script = ExtResource("1_eymce")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0.25, 0.25)
+scale = Vector2(3, 3)
+texture = ExtResource("2_yw3yc")
+
+[node name="FireRateTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(0.25, 0.25)
+rotation = 1.5895778
+shape = SubResource("CapsuleShape2D_ovn01")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
+scale = Vector2(0.99999994, 1)
+shape = SubResource("CapsuleShape2D_eymce")
+
+[node name="HealthBarContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.99999994, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="HealthBarContainer"]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1.0588765e-06, 0.8718808, 0.50250036, 1)
+offset_left = -67.0
+offset_top = 45.0
+offset_right = 68.0
+offset_bottom = 72.0
+scale = Vector2(0.9894911, 0.41141832)
+value = 100.0
+show_percentage = false
+
+[node name="PickUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_647no")
+
+[node name="ThankYou" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_tq0o6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.6, 0.6)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = -100
+offset_left = -2712.9631
+offset_top = -2778.5
+offset_right = -2365.5422
+offset_bottom = -2687.3284
+scale = Vector2(16.431158, 62.699104)
+color = Color(0, 0, 0, 1)
+
+[node name="OrbitalPivot" type="Node2D" parent="."]
+visible = false
+position = Vector2(5.9604645e-08, 0)
+script = ExtResource("5_7eign")
+
+[node name="HeavyBall" parent="OrbitalPivot" instance=ExtResource("6_bdmsg")]
+position = Vector2(383, -368)
+
+[node name="Rockets" type="Node2D" parent="."]
+
+[node name="RocketAnimation" parent="Rockets" instance=ExtResource("5_yw3yc")]
+position = Vector2(-5.9999995, 40)
+rotation = -3.1415925
+scale = Vector2(0.79502976, 1.1064141)
+frame_progress = 0.66348386
+
+[node name="RocketAnimation3" parent="Rockets" instance=ExtResource("5_yw3yc")]
+position = Vector2(6, 40.000004)
+rotation = -3.1415925
+scale = Vector2(0.79502976, 1.1064141)
+frame_progress = 0.33943552
+
+[connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

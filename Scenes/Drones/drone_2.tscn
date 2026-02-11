@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhqe7o0l0arkt"]
+
+[ext_resource type="Texture2D" uid="uid://cnr434cm27wqy" path="res://Assets/Drones/Drone1/Drone_2_Body.png" id="1_gnig1"]
+[ext_resource type="Texture2D" uid="uid://do2poh0g4g8o2" path="res://Assets/Drones/Drone1/Drone_2_Flags.png" id="2_1bod5"]
+
+[node name="Drone2" type="CharacterBody2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("1_gnig1")
+
+[node name="Flags" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("2_1bod5")

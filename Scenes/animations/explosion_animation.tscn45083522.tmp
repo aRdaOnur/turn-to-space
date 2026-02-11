@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://b03rhgvgmejqf"]
+
+[ext_resource type="Texture2D" uid="uid://2q3ejitmmnf5" path="res://Assets/explosion_anim.png" id="1_quqqg"]
+[ext_resource type="Script" uid="uid://cp21tq7bsjxd1" path="res://Scenes/animations/explosion.gd" id="2_04w6k"]
+[ext_resource type="AudioStream" uid="uid://lelvjv28k4o4" path="res://Assets/sounds/pop-402323.mp3" id="3_hxvxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04w6k"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxvxp"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_halbd"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uslyi"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu58b"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbmnq"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plgid"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlhwg"]
+atlas = ExtResource("1_quqqg")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gsdk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04w6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxvxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_halbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uslyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu58b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbmnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plgid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlhwg")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 20.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2gsdk")
+animation = &"explode"
+autoplay = "explode"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("2_04w6k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hxvxp")
+autoplay = true
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

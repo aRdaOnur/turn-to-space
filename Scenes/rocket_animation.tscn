@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://d01ex73lc6orl"]
+
+[ext_resource type="Texture2D" uid="uid://4b66eurse05i" path="res://Assets/Fire Effect and Bullet 16x16.png" id="1_pqs27"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqs27"]
+atlas = ExtResource("1_pqs27")
+region = Rect2(224, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq5ij"]
+atlas = ExtResource("1_pqs27")
+region = Rect2(240, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1t5v"]
+atlas = ExtResource("1_pqs27")
+region = Rect2(256, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o2pa"]
+atlas = ExtResource("1_pqs27")
+region = Rect2(272, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4sivv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqs27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq5ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1t5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o2pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="RocketAnimation" type="AnimatedSprite2D"]
+rotation = -1.5707964
+scale = Vector2(1.2478875, 1.2478875)
+sprite_frames = SubResource("SpriteFrames_4sivv")
+autoplay = "default"

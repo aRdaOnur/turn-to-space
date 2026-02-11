@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://db6n438adyr0s"]
+
+[ext_resource type="Texture2D" uid="uid://cbsmja2uym8te" path="res://Assets/Explosion/shock_wave_2.png" id="1_6abbj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d8ru"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs6np"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2me2n"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_col2d"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2guh4"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xndk3"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anlx4"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpcrb"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sekuu"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnlbj"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nri7"]
+atlas = ExtResource("1_6abbj")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nm4o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d8ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs6np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2me2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_col2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2guh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xndk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anlx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpcrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sekuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnlbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nri7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="ShockWave" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_nm4o4")
+autoplay = "default"
+frame_progress = 1.0

@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dannb4wb5wdq6"]
+
+[ext_resource type="Texture2D" uid="uid://dr5cynvj27w5m" path="res://Assets/Explosion/16.png" id="1_xdwmp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi5sf"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exv3q"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v6n6"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(576, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q41hg"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(640, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdaro"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(704, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh3ir"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(768, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8couf"]
+atlas = ExtResource("1_xdwmp")
+region = Rect2(832, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nt7y8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi5sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exv3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v6n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q41hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdaro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh3ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8couf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Electric_Explosion" type="AnimatedSprite2D"]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_nt7y8")
+frame_progress = 0.10691218

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkjwjxhseq41m"]
+
+[ext_resource type="Texture2D" uid="uid://tvqrwdb8bpv6" path="res://Assets/Particles/asteroid_particle_2.png" id="1_awluv"]
+
+[sub_resource type="Curve" id="Curve_dafmy"]
+_data = [Vector2(0.006329119, 0.92134833), 0.0, -1.1835204, 0, 0, Vector2(0.78481007, 0.73033714), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="AsteroidHitParticle" type="CPUParticles2D"]
+emitting = false
+amount = 5
+texture = ExtResource("1_awluv")
+lifetime = 3.0
+one_shot = true
+speed_scale = 10.0
+explosiveness = 1.0
+randomness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_dafmy")

@@ -1,0 +1,1308 @@
+[gd_scene load_steps=99 format=3 uid="uid://bgeml36wd8j12"]
+
+[ext_resource type="Script" uid="uid://dify6bak4wbuq" path="res://Scenes/main_menu.gd" id="1_opfnp"]
+[ext_resource type="FontFile" uid="uid://cg5lho1j110w6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://bt866qb7ivoej" path="res://Assets/SpaceShip.png" id="3_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://bjoeiryjcue3v" path="res://Assets/asteroid.png" id="4_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://bebau5e5wv13r" path="res://Assets/heavy-ball.png" id="5_5egv6"]
+[ext_resource type="Texture2D" uid="uid://dpxgla2yq1v57" path="res://Assets/FireAsset.png" id="5_yhxw7"]
+[ext_resource type="PackedScene" uid="uid://c56l0mp8y5mco" path="res://Scenes/astroneer.tscn" id="6_opfnp"]
+[ext_resource type="PackedScene" uid="uid://bpsgsu5tyu74h" path="res://Scenes/animations/gold_coin.tscn" id="6_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://xvx8c3ico7n8" path="res://Assets/star-Sheet.png" id="7_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/minecrft alimünyim.png" id="9_16hvj"]
+[ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="10_16hvj"]
+[ext_resource type="Texture2D" uid="uid://ccx8ojcywxtos" path="res://Assets/astroneer.png" id="11_5egv6"]
+[ext_resource type="Texture2D" uid="uid://dehvqm55c5erd" path="res://Assets/asteroid-2.png" id="11_t1dhk"]
+[ext_resource type="Script" uid="uid://dheq3ako6dcy8" path="res://scripts/panels/ship_select_panel.gd" id="14_8dnnj"]
+[ext_resource type="Script" uid="uid://bfte51mdmrw77" path="res://scripts/close_panel.gd" id="14_vtepg"]
+[ext_resource type="Texture2D" uid="uid://citjndm7jhbsb" path="res://Assets/Spaceship 2.png" id="16_m3bi6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5v2v"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opfnp"]
+bg_color = Color(0.14509805, 0.14509805, 0.14509805, 0.39607844)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5egv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtepg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dnnj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3bi6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyh8j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujyyl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkpwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4nkqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehtkc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6dk6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jr6u5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m47u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84iac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5n0dv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ne6ao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tt8ml"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmarx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hkdq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pavwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4v5qc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcoo4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jw7lb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vfk8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xund"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_msuys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aylim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y82t1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmhhk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pddej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ko05x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43km2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3533h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp8uv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu0lx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujm45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aj2v6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vj5y7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l6me"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y17f6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hovqx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8qja"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(96, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4vbm"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(112, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b2rl"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(128, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7duk"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(144, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2bd8"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(256, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0pa3"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(272, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ol1o"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(288, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gofb6"]
+atlas = ExtResource("5_yhxw7")
+region = Rect2(304, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trj04"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8qja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4vbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b2rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7duk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2bd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0pa3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ol1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gofb6")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1dhk"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5egv6"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtepg"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dnnj"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3bi6"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyh8j"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujyyl"]
+atlas = ExtResource("9_16hvj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkpwh"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nkqq"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehtkc"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dk6o"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr6u5"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m47u"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84iac"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n0dv"]
+atlas = ExtResource("10_16hvj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16hvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr1f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1dhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5egv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtepg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dnnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3bi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyh8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujyyl")
+}],
+"loop": false,
+"name": &"eserium",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkpwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nkqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehtkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dk6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr6u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m47u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84iac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n0dv")
+}],
+"loop": false,
+"name": &"gold",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(18.540012, 18.04701, 18.821728, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0.00068738795, 0.0005162346, 0.00068738795, 0.8627451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pddej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w71i6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tni0p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8avj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mldsx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvnub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2gki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yuqo8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifnak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3eqs5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qc4h"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opfnp")
+
+[node name="TurnToSpace" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 404.0
+offset_right = 612.0
+offset_bottom = 444.0
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "Turn To Space"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="SpaceShip" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(359, 531.25)
+scale = Vector2(0.46593186, 0.46593186)
+texture = ExtResource("3_yhxw7")
+
+[node name="Start" type="Button" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 268.0
+offset_top = 624.25
+offset_right = 456.0
+offset_bottom = 655.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5v2v")
+text = "START"
+
+[node name="Asteroid" type="Sprite2D" parent="."]
+position = Vector2(608, 118.00006)
+rotation = 1.073206
+scale = Vector2(0.29916742, 0.2994612)
+texture = ExtResource("4_vr1f0")
+
+[node name="Buttons" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_top = -65.0
+offset_right = 40.0
+offset_bottom = -42.0
+scale = Vector2(1.0014718, 1)
+
+[node name="SpaceShipButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 966.00006
+offset_right = 68.0
+offset_bottom = 989.00006
+scale = Vector2(5.4677534, 10.893336)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5egv6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vtepg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8dnnj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m3bi6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_wyh8j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ujyyl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mkpwh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4nkqq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ehtkc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6dk6o")
+
+[node name="ShipName" type="Label" parent="Buttons/SpaceShipButton"]
+layout_mode = 0
+offset_top = 0.10273972
+offset_right = 201.34706
+offset_bottom = 26.756792
+scale = Vector2(0.19821507, 0.12013288)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+text = "ESER-31Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceShip2" type="Sprite2D" parent="Buttons/SpaceShipButton"]
+position = Vector2(20.263481, 12.851893)
+scale = Vector2(0.0783389, 0.041744974)
+texture = ExtResource("3_yhxw7")
+
+[node name="Gun1Button" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 966.0
+offset_right = 296.0
+offset_bottom = 989.0
+scale = Vector2(5.4677534, 10.893336)
+theme_override_styles/normal = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jr6u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6m47u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_84iac")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5n0dv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ne6ao")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tt8ml")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_fmarx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hkdq0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_pavwk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4v5qc")
+
+[node name="Label" type="Label" parent="Buttons/Gun1Button"]
+layout_mode = 0
+offset_top = 0.10273972
+offset_right = 201.34706
+offset_bottom = 24.90407
+scale = Vector2(0.19821507, 0.12013288)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+text = "ESER-31Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gun2Button" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 952.0
+offset_right = 526.0
+offset_bottom = 975.0
+scale = Vector2(5.4677534, 5.8935513)
+theme_override_styles/normal = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xcoo4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jw7lb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6vfk8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1xund")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_msuys")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aylim")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_y82t1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bmhhk")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_pddej")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ko05x")
+
+[node name="HeavyBall" type="Sprite2D" parent="Buttons/Gun2Button"]
+position = Vector2(19.775143, 13.234808)
+scale = Vector2(0.08498079, 0.07884109)
+texture = ExtResource("5_5egv6")
+
+[node name="Label" type="Label" parent="Buttons/Gun2Button"]
+layout_mode = 0
+offset_top = 0.10273972
+offset_right = 201.34706
+offset_bottom = 24.90407
+scale = Vector2(0.19821507, 0.18136157)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+text = "HeavyBall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BulletLabel" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 1101.0001
+offset_right = 526.0
+offset_bottom = 1124.0001
+scale = Vector2(5.4677534, 5.6545563)
+theme_override_styles/normal = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_43km2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3533h")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_dp8uv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uu0lx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ujm45")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aj2v6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vj5y7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3l6me")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y17f6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hovqx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Buttons/BulletLabel"]
+position = Vector2(19.044653, 10.96459)
+rotation = 0.007902265
+scale = Vector2(1.1467028, 1.1467028)
+sprite_frames = SubResource("SpriteFrames_trj04")
+autoplay = "default"
+
+[node name="Label2" type="Label" parent="Buttons/BulletLabel"]
+layout_mode = 0
+offset_top = 0.10273972
+offset_right = 201.34706
+offset_bottom = 24.90407
+scale = Vector2(0.19821507, 0.18136157)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+text = "Arrow-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="StarSheet" type="Sprite2D" parent="Stars"]
+position = Vector2(458, 516)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet2" type="Sprite2D" parent="Stars"]
+position = Vector2(422, 130)
+scale = Vector2(1.645, 1.645)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet3" type="Sprite2D" parent="Stars"]
+position = Vector2(109, 244.00002)
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet4" type="Sprite2D" parent="Stars"]
+position = Vector2(386, 318)
+scale = Vector2(-1.3214488, -1.3214488)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet5" type="Sprite2D" parent="Stars"]
+position = Vector2(530, 257)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet6" type="Sprite2D" parent="Stars"]
+position = Vector2(234, 130)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet7" type="Sprite2D" parent="Stars"]
+position = Vector2(155, 644)
+scale = Vector2(2.34, 2.34)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet8" type="Sprite2D" parent="Stars"]
+position = Vector2(594, 807)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet9" type="Sprite2D" parent="Stars"]
+position = Vector2(508, 705)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet10" type="Sprite2D" parent="Stars"]
+position = Vector2(646.00006, 728)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="Astroneers" type="Node2D" parent="."]
+
+[node name="Astroneer" parent="Astroneers" instance=ExtResource("6_opfnp")]
+position = Vector2(197, 577)
+rotation = -0.48336852
+
+[node name="Astroneer2" parent="Astroneers" instance=ExtResource("6_opfnp")]
+position = Vector2(552, 544)
+rotation = 1.9863055
+
+[node name="Astroneer3" parent="Astroneers" instance=ExtResource("6_opfnp")]
+position = Vector2(613.00006, 651)
+rotation = 0.5882036
+
+[node name="Astroneer4" parent="Astroneers" instance=ExtResource("6_opfnp")]
+position = Vector2(156.99998, 338.99997)
+rotation = 0.16983166
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("6_vr1f0")]
+position = Vector2(107, 598)
+rotation = -0.6211597
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("6_vr1f0")]
+position = Vector2(497, 508)
+rotation = 0.08243055
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("6_vr1f0")]
+position = Vector2(262, 715.00006)
+rotation = 1.5289637
+
+[node name="CurrentCoin" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 28.0
+offset_top = 1430.0
+offset_right = 68.0
+offset_bottom = 1453.0
+scale = Vector2(1.7199993, 1.7199993)
+
+[node name="AmountOfCoin" type="Label" parent="CurrentCoin"]
+layout_mode = 0
+offset_left = 47.093044
+offset_top = -346.2316
+offset_right = 60.093044
+offset_bottom = -332.2316
+scale = Vector2(1.4329329, 1.4329329)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CurrentCoin"]
+position = Vector2(23.837223, -335.1851)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"gold"
+
+[node name="CurrentIron" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 28.999989
+offset_top = 1372.0
+offset_right = 68.999985
+offset_bottom = 1395.0
+scale = Vector2(1.7199993, 1.7199993)
+
+[node name="AmountOfIron" type="Label" parent="CurrentIron"]
+layout_mode = 0
+offset_left = 47.093044
+offset_top = -346.2316
+offset_right = 60.093044
+offset_bottom = -332.2316
+scale = Vector2(1.4329329, 1.4329329)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CurrentIron"]
+position = Vector2(24.999996, -335.18506)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"eserium"
+
+[node name="CurrentAstroneer" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 28.999989
+offset_top = 1312.0
+offset_right = 68.999985
+offset_bottom = 1335.0
+scale = Vector2(1.7199993, 1.7199993)
+
+[node name="AmountOfAstroneer" type="Label" parent="CurrentAstroneer"]
+layout_mode = 0
+offset_left = 47.093044
+offset_top = -346.2316
+offset_right = 60.093044
+offset_bottom = -332.2316
+scale = Vector2(1.4329329, 1.4329329)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="CurrentAstroneer"]
+position = Vector2(23.837229, -334.88376)
+scale = Vector2(0.13840106, 0.13840106)
+texture = ExtResource("11_5egv6")
+
+[node name="Asteroid2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(145, 83.00001)
+scale = Vector2(2.3198497, 2.3153627)
+texture = ExtResource("11_t1dhk")
+
+[node name="Ad" type="Label" parent="."]
+modulate = Color(0.5568628, 0, 0.7490196, 1)
+z_index = 2
+layout_mode = 0
+offset_top = 1189.0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vr1f0")
+text = "REKLAM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 178.0
+offset_right = 502.76813
+offset_bottom = 201.0
+scale = Vector2(1.4329329, 1.4329329)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panels" type="Node" parent="."]
+
+[node name="ShipSelectPanel" type="Panel" parent="Panels"]
+visible = false
+z_index = 3
+offset_left = 1.0
+offset_top = 1.65271
+offset_right = 719.0
+offset_bottom = 1189.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1dhk")
+script = ExtResource("14_8dnnj")
+
+[node name="ClosePanel" type="Button" parent="Panels/ShipSelectPanel"]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 14.34729
+offset_right = 633.3012
+offset_bottom = 56.34729
+scale = Vector2(2.5665102, 2.5665102)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pddej")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w71i6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tni0p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m8avj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mldsx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvnub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u2gki")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yuqo8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ifnak")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3eqs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6qc4h")
+text = "x"
+script = ExtResource("14_vtepg")
+
+[node name="CurrentShip" type="Button" parent="Panels/ShipSelectPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Spaceship" type="Sprite2D" parent="Panels/ShipSelectPanel/CurrentShip"]
+z_index = 5
+position = Vector2(356, 577.3473)
+texture = ExtResource("16_m3bi6")
+
+[node name="Name" type="Label" parent="Panels/ShipSelectPanel/CurrentShip"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 292.3473
+offset_right = 719.0
+offset_bottom = 418.3473
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 50
+text = "HILL-ALL 32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select" type="Button" parent="Panels/ShipSelectPanel/CurrentShip"]
+layout_mode = 0
+offset_top = 1079.3473
+offset_right = 719.0
+offset_bottom = 1186.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 36
+text = "Selected"
+
+[node name="LeftButton" type="Button" parent="Panels/ShipSelectPanel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 527.3473
+offset_right = 90.0
+offset_bottom = 672.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = "<"
+
+[node name="RightButton" type="Button" parent="Panels/ShipSelectPanel"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 530.3473
+offset_right = 696.0
+offset_bottom = 675.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[node name="Prices" type="Label" parent="Panels/ShipSelectPanel"]
+layout_mode = 0
+offset_left = -105.0
+offset_right = -65.0
+offset_bottom = 23.0
+
+[node name="Astrooner" type="Label" parent="Panels/ShipSelectPanel/Prices"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 897.34735
+offset_right = 409.0
+offset_bottom = 920.34735
+scale = Vector2(2.308741, 2.308741)
+
+[node name="Sprite2D" type="Sprite2D" parent="Panels/ShipSelectPanel/Prices/Astrooner"]
+position = Vector2(-19.491148, -2.723999)
+scale = Vector2(0.13840106, 0.13840106)
+texture = ExtResource("11_5egv6")
+
+[node name="AmountOfAstroneer" type="Label" parent="Panels/ShipSelectPanel/Prices/Astrooner"]
+layout_mode = 0
+offset_left = 1.2994075
+offset_top = -11.26157
+offset_right = 241.29941
+offset_bottom = 28.73843
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "12.000"
+
+[node name="Coin" type="Label" parent="Panels/ShipSelectPanel/Prices"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 809.3473
+offset_right = 398.0
+offset_bottom = 832.3473
+scale = Vector2(2.242726, 2.242726)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/ShipSelectPanel/Prices/Coin"]
+position = Vector2(-14.905846, -2.5585938)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"gold"
+
+[node name="AmountOfCoin" type="Label" parent="Panels/ShipSelectPanel/Prices/Coin"]
+layout_mode = 0
+offset_left = 6.2196465
+offset_top = -9.36361
+offset_right = 246.21965
+offset_bottom = 30.63639
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "200.000"
+
+[node name="Iron" type="Label" parent="Panels/ShipSelectPanel/Prices"]
+layout_mode = 0
+offset_left = 339.00006
+offset_top = 965.34735
+offset_right = 379.00006
+offset_bottom = 988.34735
+scale = Vector2(2.2312796, 2.2312796)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/ShipSelectPanel/Prices/Iron"]
+position = Vector2(-5.826281, 0.44815874)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"eserium"
+
+[node name="AmountOfIron" type="Label" parent="Panels/ShipSelectPanel/Prices/Iron"]
+layout_mode = 0
+offset_left = 15.686036
+offset_top = -7.1708055
+offset_right = 255.68604
+offset_bottom = 32.829193
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "1.500"
+
+[node name="SelectGun1" type="Panel" parent="Panels"]
+visible = false
+z_index = 3
+offset_left = 1.0
+offset_top = 1.65271
+offset_right = 719.0
+offset_bottom = 1189.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1dhk")
+
+[node name="ClosePanel" type="Button" parent="Panels/SelectGun1"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 8.34729
+offset_right = 643.3012
+offset_bottom = 37.569855
+scale = Vector2(2.5665102, 2.5665102)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pddej")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w71i6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tni0p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m8avj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mldsx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvnub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u2gki")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yuqo8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ifnak")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3eqs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6qc4h")
+text = "x"
+script = ExtResource("14_vtepg")
+
+[node name="Prices" type="Label" parent="Panels/SelectGun1"]
+layout_mode = 0
+offset_left = -105.0
+offset_right = -65.0
+offset_bottom = 23.0
+
+[node name="Astrooner" type="Label" parent="Panels/SelectGun1/Prices"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 897.34735
+offset_right = 409.0
+offset_bottom = 920.34735
+scale = Vector2(2.308741, 2.308741)
+
+[node name="Sprite2D" type="Sprite2D" parent="Panels/SelectGun1/Prices/Astrooner"]
+position = Vector2(-19.491148, -2.723999)
+scale = Vector2(0.13840106, 0.13840106)
+texture = ExtResource("11_5egv6")
+
+[node name="AmountOfAstroneer" type="Label" parent="Panels/SelectGun1/Prices/Astrooner"]
+layout_mode = 0
+offset_left = 1.2994075
+offset_top = -11.26157
+offset_right = 241.29941
+offset_bottom = 28.73843
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "12.000"
+
+[node name="Coin" type="Label" parent="Panels/SelectGun1/Prices"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 809.3473
+offset_right = 398.0
+offset_bottom = 832.3473
+scale = Vector2(2.242726, 2.242726)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectGun1/Prices/Coin"]
+position = Vector2(-14.905846, -2.5585938)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"gold"
+
+[node name="AmountOfCoin" type="Label" parent="Panels/SelectGun1/Prices/Coin"]
+layout_mode = 0
+offset_left = 6.2196465
+offset_top = -9.36361
+offset_right = 246.21965
+offset_bottom = 30.63639
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "200.000"
+
+[node name="Iron" type="Label" parent="Panels/SelectGun1/Prices"]
+layout_mode = 0
+offset_left = 339.00006
+offset_top = 965.34735
+offset_right = 379.00006
+offset_bottom = 988.34735
+scale = Vector2(2.2312796, 2.2312796)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectGun1/Prices/Iron"]
+position = Vector2(-5.826281, 0.44815874)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"eserium"
+
+[node name="AmountOfIron" type="Label" parent="Panels/SelectGun1/Prices/Iron"]
+layout_mode = 0
+offset_left = 15.686036
+offset_top = -7.1708055
+offset_right = 255.68604
+offset_bottom = 32.829193
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "1.500"
+
+[node name="LeftButton" type="Button" parent="Panels/SelectGun1"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 527.3473
+offset_right = 90.0
+offset_bottom = 672.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = "<"
+
+[node name="RightButton" type="Button" parent="Panels/SelectGun1"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 530.3473
+offset_right = 696.0
+offset_bottom = 675.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[node name="SelectGun2" type="Panel" parent="Panels"]
+visible = false
+z_index = 3
+offset_left = 1.0
+offset_top = 1.65271
+offset_right = 719.0
+offset_bottom = 1189.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1dhk")
+
+[node name="ClosePanel" type="Button" parent="Panels/SelectGun2"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 8.34729
+offset_right = 643.3012
+offset_bottom = 37.569855
+scale = Vector2(2.5665102, 2.5665102)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pddej")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w71i6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tni0p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m8avj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mldsx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvnub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u2gki")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yuqo8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ifnak")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3eqs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6qc4h")
+text = "x"
+script = ExtResource("14_vtepg")
+
+[node name="Prices" type="Label" parent="Panels/SelectGun2"]
+layout_mode = 0
+offset_left = -105.0
+offset_right = -65.0
+offset_bottom = 23.0
+
+[node name="Astrooner" type="Label" parent="Panels/SelectGun2/Prices"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 897.34735
+offset_right = 409.0
+offset_bottom = 920.34735
+scale = Vector2(2.308741, 2.308741)
+
+[node name="Sprite2D" type="Sprite2D" parent="Panels/SelectGun2/Prices/Astrooner"]
+position = Vector2(-19.491148, -2.723999)
+scale = Vector2(0.13840106, 0.13840106)
+texture = ExtResource("11_5egv6")
+
+[node name="AmountOfAstroneer" type="Label" parent="Panels/SelectGun2/Prices/Astrooner"]
+layout_mode = 0
+offset_left = 1.2994075
+offset_top = -11.26157
+offset_right = 241.29941
+offset_bottom = 28.73843
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "12.000"
+
+[node name="Coin" type="Label" parent="Panels/SelectGun2/Prices"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 809.3473
+offset_right = 398.0
+offset_bottom = 832.3473
+scale = Vector2(2.242726, 2.242726)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectGun2/Prices/Coin"]
+position = Vector2(-14.905846, -2.5585938)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"gold"
+
+[node name="AmountOfCoin" type="Label" parent="Panels/SelectGun2/Prices/Coin"]
+layout_mode = 0
+offset_left = 6.2196465
+offset_top = -9.36361
+offset_right = 246.21965
+offset_bottom = 30.63639
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "200.000"
+
+[node name="Iron" type="Label" parent="Panels/SelectGun2/Prices"]
+layout_mode = 0
+offset_left = 339.00006
+offset_top = 965.34735
+offset_right = 379.00006
+offset_bottom = 988.34735
+scale = Vector2(2.2312796, 2.2312796)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectGun2/Prices/Iron"]
+position = Vector2(-5.826281, 0.44815874)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"eserium"
+
+[node name="AmountOfIron" type="Label" parent="Panels/SelectGun2/Prices/Iron"]
+layout_mode = 0
+offset_left = 15.686036
+offset_top = -7.1708055
+offset_right = 255.68604
+offset_bottom = 32.829193
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "1.500"
+
+[node name="LeftButton" type="Button" parent="Panels/SelectGun2"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 527.3473
+offset_right = 90.0
+offset_bottom = 672.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = "<"
+
+[node name="RightButton" type="Button" parent="Panels/SelectGun2"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 530.3473
+offset_right = 696.0
+offset_bottom = 675.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[node name="SelectBullet" type="Panel" parent="Panels"]
+visible = false
+z_index = 3
+offset_left = 1.0
+offset_top = 1.65271
+offset_right = 719.0
+offset_bottom = 1189.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1dhk")
+
+[node name="ClosePanel" type="Button" parent="Panels/SelectBullet"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 8.34729
+offset_right = 643.3012
+offset_bottom = 37.569855
+scale = Vector2(2.5665102, 2.5665102)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pddej")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w71i6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tni0p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m8avj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mldsx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvnub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u2gki")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yuqo8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ifnak")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3eqs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6qc4h")
+text = "x"
+script = ExtResource("14_vtepg")
+
+[node name="Prices" type="Label" parent="Panels/SelectBullet"]
+layout_mode = 0
+offset_left = -105.0
+offset_right = -65.0
+offset_bottom = 23.0
+
+[node name="Astrooner" type="Label" parent="Panels/SelectBullet/Prices"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 897.34735
+offset_right = 409.0
+offset_bottom = 920.34735
+scale = Vector2(2.308741, 2.308741)
+
+[node name="Sprite2D" type="Sprite2D" parent="Panels/SelectBullet/Prices/Astrooner"]
+position = Vector2(-19.491148, -2.723999)
+scale = Vector2(0.13840106, 0.13840106)
+texture = ExtResource("11_5egv6")
+
+[node name="AmountOfAstroneer" type="Label" parent="Panels/SelectBullet/Prices/Astrooner"]
+layout_mode = 0
+offset_left = 1.2994075
+offset_top = -11.26157
+offset_right = 241.29941
+offset_bottom = 28.73843
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "12.000"
+
+[node name="Coin" type="Label" parent="Panels/SelectBullet/Prices"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 809.3473
+offset_right = 398.0
+offset_bottom = 832.3473
+scale = Vector2(2.242726, 2.242726)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectBullet/Prices/Coin"]
+position = Vector2(-14.905846, -2.5585938)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"gold"
+
+[node name="AmountOfCoin" type="Label" parent="Panels/SelectBullet/Prices/Coin"]
+layout_mode = 0
+offset_left = 6.2196465
+offset_top = -9.36361
+offset_right = 246.21965
+offset_bottom = 30.63639
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "200.000"
+
+[node name="Iron" type="Label" parent="Panels/SelectBullet/Prices"]
+layout_mode = 0
+offset_left = 339.00006
+offset_top = 965.34735
+offset_right = 379.00006
+offset_bottom = 988.34735
+scale = Vector2(2.2312796, 2.2312796)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panels/SelectBullet/Prices/Iron"]
+position = Vector2(-5.826281, 0.44815874)
+scale = Vector2(1.9433845, 1.9433845)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"eserium"
+
+[node name="AmountOfIron" type="Label" parent="Panels/SelectBullet/Prices/Iron"]
+layout_mode = 0
+offset_left = 15.686036
+offset_top = -7.1708055
+offset_right = 255.68604
+offset_bottom = 32.829193
+scale = Vector2(0.38252878, 0.38252878)
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 40
+text = "1.500"
+
+[node name="LeftButton" type="Button" parent="Panels/SelectBullet"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 527.3473
+offset_right = 90.0
+offset_bottom = 672.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = "<"
+
+[node name="RightButton" type="Button" parent="Panels/SelectBullet"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 530.3473
+offset_right = 696.0
+offset_bottom = 675.3473
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/SpaceShipButton" to="." method="_on_space_ship_button_pressed"]
+[connection signal="pressed" from="Buttons/Gun1Button" to="." method="_on_gun_1_button_pressed"]
+[connection signal="pressed" from="Buttons/Gun2Button" to="." method="_on_gun_2_button_pressed"]
+[connection signal="pressed" from="Buttons/BulletLabel" to="." method="_on_bullet_label_pressed"]
+[connection signal="pressed" from="Panels/ShipSelectPanel/ClosePanel" to="Panels/ShipSelectPanel/ClosePanel" method="_on_pressed"]
+[connection signal="pressed" from="Panels/ShipSelectPanel/CurrentShip/Select" to="." method="_on_select_pressed"]
+[connection signal="pressed" from="Panels/ShipSelectPanel/CurrentShip/Select" to="Panels/ShipSelectPanel" method="_on_select_pressed"]
+[connection signal="pressed" from="Panels/ShipSelectPanel/LeftButton" to="Panels/ShipSelectPanel" method="_on_left_button_pressed"]
+[connection signal="pressed" from="Panels/ShipSelectPanel/RightButton" to="Panels/ShipSelectPanel" method="_on_right_button_pressed"]
+[connection signal="pressed" from="Panels/SelectGun1/ClosePanel" to="Panels/SelectGun1/ClosePanel" method="_on_pressed"]
+[connection signal="pressed" from="Panels/SelectGun2/ClosePanel" to="Panels/SelectGun2/ClosePanel" method="_on_pressed"]
+[connection signal="pressed" from="Panels/SelectBullet/ClosePanel" to="Panels/SelectBullet/ClosePanel" method="_on_pressed"]

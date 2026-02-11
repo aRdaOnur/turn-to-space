@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://krgk2cwngajr"]
+
+[ext_resource type="Script" uid="uid://bwwad2hgjwi15" path="res://Scenes/iron_asteroid.gd" id="1_88kja"]
+[ext_resource type="Texture2D" uid="uid://doox2l6tssnap" path="res://Scenes/ironAsteroid.png" id="1_ymxaj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_88kja"]
+radius = 31.400637
+
+[node name="IronAsteroid" type="CharacterBody2D"]
+script = ExtResource("1_88kja")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.536743e-07, 1.1920929e-07)
+scale = Vector2(-2.458198, -2.458198)
+texture = ExtResource("1_ymxaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_88kja")

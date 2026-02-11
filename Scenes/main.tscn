@@ -1,0 +1,286 @@
+[gd_scene load_steps=28 format=3 uid="uid://b41k8shhq65h8"]
+
+[ext_resource type="Script" uid="uid://d21bvj4rycwc5" path="res://Scenes/main.gd" id="1_21xkr"]
+[ext_resource type="Script" uid="uid://bijx8x5wu3c31" path="res://addons/virtual_joystick/virtual_joystick.gd" id="2_5dvug"]
+[ext_resource type="Texture2D" uid="uid://bwtsaghuu6u3i" path="res://Assets/Enjl-Starry Space Background/background_1.png" id="2_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://bm30au8mjfc2f" path="res://addons/virtual_joystick/textures/joystick_base_outline.png" id="3_m1d2h"]
+[ext_resource type="Texture2D" uid="uid://dt13r06u87fib" path="res://addons/virtual_joystick/textures/joystick_tip_arrows.png" id="4_pu3uw"]
+[ext_resource type="Texture2D" uid="uid://ccx8ojcywxtos" path="res://Assets/astroneer.png" id="8_344ge"]
+[ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="8_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/minecrft alimünyim.png" id="8_hptm8"]
+[ext_resource type="FontFile" uid="uid://cg5lho1j110w6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="8_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://bhqe7o0l0arkt" path="res://Scenes/Drones/drone_2.tscn" id="10_hptm8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iyac"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdnlq"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkdf5"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsu2k"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pmx8"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u50mg"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbgmd"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w6v2"]
+atlas = ExtResource("8_d1ilt")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k12tt"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1bgf"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3802"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fevyy"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hibaj"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdsj5"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4r6"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt3je"]
+atlas = ExtResource("8_hptm8")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k12tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iyac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdnlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkdf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsu2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pmx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u50mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbgmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w6v2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k12tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1bgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3802")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fevyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hibaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdsj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee4r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt3je")
+}],
+"loop": true,
+"name": &"iron",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_21xkr")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(10000, 10000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.5137255, 0.5137255, 0.5137255, 0.5803922)
+texture_repeat = 2
+position = Vector2(-11, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ynf5e")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 10000)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 203.0
+offset_top = -316.0
+offset_right = 503.0
+offset_bottom = -16.0
+grow_vertical = 0
+script = ExtResource("2_5dvug")
+metadata/_edit_use_anchors_ = true
+
+[node name="Base" type="TextureRect" parent="CanvasLayer/Virtual Joystick2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+mouse_force_pass_scroll_events = false
+texture = ExtResource("3_m1d2h")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Tip" type="TextureRect" parent="CanvasLayer/Virtual Joystick2/Base"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("4_pu3uw")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Astroneer" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(29.960068, 46.24009)
+scale = Vector2(0.26172575, 0.26172575)
+texture = ExtResource("8_344ge")
+
+[node name="AstroneerCounter" type="Label" parent="CanvasLayer"]
+offset_left = 56.960068
+offset_top = 36.24009
+offset_right = 96.96007
+offset_bottom = 59.24009
+scale = Vector2(1.0905225, 1.0905225)
+theme_override_fonts/font = ExtResource("8_ynf5e")
+text = "0"
+
+[node name="CoinCounter" type="Label" parent="CanvasLayer"]
+offset_left = 57.0
+offset_top = 103.0
+offset_right = 97.0
+offset_bottom = 125.999985
+scale = Vector2(1.1105208, 1.0905225)
+theme_override_fonts/font = ExtResource("8_ynf5e")
+text = "0"
+
+[node name="Coin" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(30.000002, 111.391304)
+scale = Vector2(2.221042, 2.3707013)
+sprite_frames = SubResource("SpriteFrames_k12tt")
+autoplay = "default"
+
+[node name="IronCounter" type="Label" parent="CanvasLayer"]
+offset_left = 56.960068
+offset_top = 165.63142
+offset_right = 96.96007
+offset_bottom = 188.6314
+scale = Vector2(1.0905225, 1.0905225)
+theme_override_fonts/font = ExtResource("8_ynf5e")
+text = "0"
+
+[node name="Iron" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(30, 171.39131)
+scale = Vector2(2.1810453, 2.3707013)
+sprite_frames = SubResource("SpriteFrames_k12tt")
+animation = &"iron"
+autoplay = "iron"
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 14.0
+offset_right = 649.73773
+offset_bottom = 142.1337
+scale = Vector2(1.1105208, 1.0905225)
+theme_override_fonts/font = ExtResource("8_ynf5e")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AsteroidSpawner" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+autostart = true
+
+[node name="AstroneerSpawner" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.5
+autostart = true
+
+[node name="IronAsteroidSpawner" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="DuckSpawner" type="Timer" parent="."]
+
+[node name="Drone2" parent="." instance=ExtResource("10_hptm8")]
+position = Vector2(432, 309)
+
+[connection signal="timeout" from="AsteroidSpawner" to="." method="_on_asteroid_spawner_timeout"]
+[connection signal="timeout" from="AstroneerSpawner" to="." method="_on_astroneer_spawner_timeout"]
+[connection signal="timeout" from="IronAsteroidSpawner" to="." method="_on_iron_asteroid_spawner_timeout"]
+[connection signal="timeout" from="DuckSpawner" to="." method="_on_duck_spawner_timeout"]
