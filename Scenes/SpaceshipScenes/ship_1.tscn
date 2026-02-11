@@ -32,13 +32,11 @@ autostart = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 position = Vector2(0.25, 0.25)
 rotation = 1.5895778
 shape = SubResource("CapsuleShape2D_ovn01")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-visible = false
 scale = Vector2(0.99999994, 1)
 shape = SubResource("CapsuleShape2D_eymce")
 

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dfmbxirdsknv8" path="res://Scenes/astroneer.tscn" id="6_opfnp"]
 [ext_resource type="PackedScene" uid="uid://bpsgsu5tyu74h" path="res://Scenes/animations/gold_coin.tscn" id="6_vr1f0"]
 [ext_resource type="Texture2D" uid="uid://xvx8c3ico7n8" path="res://Assets/star-Sheet.png" id="7_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/minecrft alimünyim.png" id="9_16hvj"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/iron.png" id="9_16hvj"]
 [ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="10_16hvj"]
 [ext_resource type="Texture2D" uid="uid://ccx8ojcywxtos" path="res://Assets/astroneer.png" id="11_5egv6"]
 [ext_resource type="Texture2D" uid="uid://dehvqm55c5erd" path="res://Assets/asteroid-2.png" id="11_t1dhk"]

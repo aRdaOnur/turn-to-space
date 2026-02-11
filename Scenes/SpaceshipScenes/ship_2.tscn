@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://h0wmnvfgqvlj"]
+[gd_scene load_steps=7 format=3 uid="uid://h0wmnvfgqvlj"]
 
 [ext_resource type="Script" uid="uid://yqo0ywbp8ok2" path="res://scripts/player.gd" id="1_8ruac"]
 [ext_resource type="Texture2D" uid="uid://dfvseec1wf33j" path="res://Assets/SpaceShips/Ship_2.png" id="2_k04n3"]
@@ -6,26 +6,20 @@
 [ext_resource type="AudioStream" uid="uid://4v7dcxo3yhra" path="res://Assets/sounds/keremThank.mp3" id="4_6krr7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ruac"]
-radius = 14.31801
-height = 96.458176
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_f11ec"]
-radius = 106.04338
+radius = 10.550113
+height = 69.329315
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k04n3"]
-radius = 18.152168
-height = 106.193405
+radius = 14.318007
+height = 76.05744
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(1.327, 1.327)
 script = ExtResource("1_8ruac")
 
 [node name="Spaceship2" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 texture = ExtResource("2_k04n3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_8ruac")
 
 [node name="FireRateTimer" type="Timer" parent="."]
 wait_time = 0.05
@@ -33,9 +27,14 @@ autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="PickCoins" type="CollisionShape2D" parent="Area2D"]
-rotation = -2.121438
-shape = SubResource("CircleShape2D_f11ec")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_8ruac")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.507159, 6.028637)
+rotation = 1.5707964
+scale = Vector2(0.7368423, 1.0502514)
+shape = SubResource("CapsuleShape2D_k04n3")
 
 [node name="HealthBarContainer" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -48,6 +47,7 @@ offset_top = 64.80783
 offset_right = 68.0
 offset_bottom = 91.80783
 scale = Vector2(0.9894911, 0.41141832)
+max_value = 200.0
 value = 100.0
 show_percentage = false
 
@@ -62,19 +62,14 @@ unique_name_in_owner = true
 zoom = Vector2(0.6, 0.6)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = -2
-offset_left = -3427.2795
-offset_top = -3147.7017
-offset_right = -2954.2004
-offset_bottom = -3025.0837
+offset_left = -3448.3796
+offset_top = -3161.2659
+offset_right = -2975.3005
+offset_bottom = -3038.648
 scale = Vector2(14.371807, 52.137524)
 color = Color(0, 0, 0, 1)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1.507159, 6.0286365)
-rotation = 1.5707964
-scale = Vector2(0.7368423, 1.0502514)
-shape = SubResource("CapsuleShape2D_k04n3")
 
 [connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://bghqiurapjitm"]
 
 [ext_resource type="Script" uid="uid://rsidfdoc3dyb" path="res://scripts/iron_ore.gd" id="1_scrmk"]
-[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/minecrft alimünyim.png" id="2_2kgdi"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/iron.png" id="2_2kgdi"]
 [ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="2_scrmk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]

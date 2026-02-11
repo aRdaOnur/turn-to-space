@@ -15,9 +15,10 @@ var space_ship = GlobalState.ships[GlobalState.selected_ship_id]
 #@onready var get_damage_sound: AudioStreamPlayer2D = $GetDamageSound
 
 # Collected Items
-@onready var coin_counter: Label = $"../CanvasLayer/CoinCounter"
-@onready var astroneer_counter: Label = $"../CanvasLayer/AstroneerCounter"
-@onready var iron_counter: Label = $"../CanvasLayer/IronCounter"
+
+@onready var coin_counter: Label = $"../CanvasLayer/MarginContainer/VBoxContainer/Coin/CoinCounter"
+@onready var astroneer_counter: Label = $"../CanvasLayer/MarginContainer/VBoxContainer/Astroneer/AstroneerCounter"
+@onready var iron_counter: Label = $"../CanvasLayer/MarginContainer/VBoxContainer/Iron/IronCounter"
 
 # setting bullet fire 
 @onready var fire_rate_timer: Timer = $FireRateTimer

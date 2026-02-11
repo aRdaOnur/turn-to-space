@@ -18,7 +18,6 @@ const MIN_ASTEROID_SCALE = 0.5
 const MAX_ASTEROID_SCALE = 0.7
 
 func _ready():
-	
 	# secilen uzay gemisini oyun sahnesine koy
 	player = GlobalState.load_player_ship().instantiate()
 	player.global_position = Vector2(0,0)
@@ -32,7 +31,6 @@ func _ready():
 	# player öldüğünde game_over
 	player.player_died.connect(game_over)
 	GlobalState.load_data()
-
 
 func spawn_astroneer():
 	var new_astroneer = astroneer_scene.instantiate()

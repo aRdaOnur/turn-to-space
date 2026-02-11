@@ -10,7 +10,7 @@ var total_irons: int = 0
 var owned_ship_ids: Array[int] = [1] # Başlangıçta sadece 1. gemi açık olsun
 
 # Gemilerin verisi (Bu kısım sabit, kaydedilmesine gerek yok)
-var ships = {
+var ships = {	
 	1: {
 		"id": 1,
 		"scene": preload("res://Scenes/SpaceshipScenes/ship_1.tscn"),
@@ -126,8 +126,18 @@ func load_data():
 		owned_ship_ids.append(int(id))
 		
 	print("Veriler yüklendi. Sahip olunan gemiler: ", owned_ship_ids)
+	
+	# if powerful ship is unlocked 
+	# than game difficulty changes
+	if owned_ship_ids.has(6):
+		game_settings["difficulty"] = "hard"
+	elif owned_ship_ids.has(3):
+		game_settings["difficulty"] = "medium"
+	else:
+		game_settings["difficulty"] = "easy"
 
 func load_player_ship():
+	
 	# Hata almamak için seçili gemi gerçekten var mı kontrol et
 	if ships.has(selected_ship_id):
 		return ships[selected_ship_id]["scene"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gi45v1wdek40" path="res://Assets/Planets/world.png" id="1_rjg3a"]
 [ext_resource type="FontFile" uid="uid://cg5lho1j110w6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_mexal"]
 [ext_resource type="Texture2D" uid="uid://ccx8ojcywxtos" path="res://Assets/astroneer.png" id="3_ikms6"]
-[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/minecrft alimünyim.png" id="4_vqvhg"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/iron.png" id="4_vqvhg"]
 [ext_resource type="FontFile" uid="uid://1mclqaxcrhac" path="res://Assets/fonts/PixelOperator8.ttf" id="5_kdhy0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3mxy"]
