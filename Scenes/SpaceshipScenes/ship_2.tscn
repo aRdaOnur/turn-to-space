@@ -61,15 +61,5 @@ stream = ExtResource("4_6krr7")
 unique_name_in_owner = true
 zoom = Vector2(0.6, 0.6)
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-z_index = -2
-offset_left = -3448.3796
-offset_top = -3161.2659
-offset_right = -2975.3005
-offset_bottom = -3038.648
-scale = Vector2(14.371807, 52.137524)
-color = Color(0, 0, 0, 1)
-
 [connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

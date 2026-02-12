@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cy7wlch2ncqhq"]
+[gd_scene load_steps=7 format=3 uid="uid://cy7wlch2ncqhq"]
 
 [ext_resource type="Script" uid="uid://yqo0ywbp8ok2" path="res://scripts/player.gd" id="1_eymce"]
 [ext_resource type="Texture2D" uid="uid://cleh6twolnwbi" path="res://Assets/SpaceShips/Ship_1.png" id="2_yw3yc"]
 [ext_resource type="AudioStream" uid="uid://b2hnf7uqkmv45" path="res://Assets/sounds/pickup-sound.mp3" id="3_647no"]
 [ext_resource type="AudioStream" uid="uid://4v7dcxo3yhra" path="res://Assets/sounds/keremThank.mp3" id="4_tq0o6"]
-[ext_resource type="Script" uid="uid://d20ohk485mxc4" path="res://scripts/orbital_pivot.gd" id="5_7eign"]
-[ext_resource type="PackedScene" uid="uid://bapvh2dfts86g" path="res://Scenes/heavy_ball.tscn" id="6_bdmsg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovn01"]
 radius = 10.664175
@@ -75,14 +73,6 @@ offset_right = -2365.5422
 offset_bottom = -2687.3284
 scale = Vector2(16.431158, 62.699104)
 color = Color(0, 0, 0, 1)
-
-[node name="OrbitalPivot" type="Node2D" parent="."]
-visible = false
-position = Vector2(5.9604645e-08, 0)
-script = ExtResource("5_7eign")
-
-[node name="HeavyBall" parent="OrbitalPivot" instance=ExtResource("6_bdmsg")]
-position = Vector2(383, -368)
 
 [connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

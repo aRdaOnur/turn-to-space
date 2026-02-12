@@ -144,3 +144,15 @@ func load_player_ship():
 	else:
 		print("HATA: Seçili gemi ID'si (", selected_ship_id, ") sözlükte yok! Default 1 yükleniyor.")
 		return ships[1]["scene"]
+
+func get_current_ship():
+	return ships[selected_ship_id + 1]
+
+
+func stringify_int(number: int) -> String:
+	if number > 999999:
+		return str(number / 1000000) + "M"
+	elif number > 999:
+		return str(number / 1000) + "K"
+	else:
+		return str(number)

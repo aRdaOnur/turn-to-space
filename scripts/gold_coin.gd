@@ -12,8 +12,9 @@ var player: CharacterBody2D
 func _ready():
 	spin_speed = randf_range(0,4)
 	player = get_node("/root/Main/Player")
-	#direction = Vector2(randf_range(-1.0,1.0),randf_range(-1.0, 1.0))
 	
+	if not player:
+		direction = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()
 	
 
 func _physics_process(delta: float) -> void:
@@ -22,7 +23,6 @@ func _physics_process(delta: float) -> void:
 		direction = global_position.direction_to(player.global_position)
 		velocity = direction * speed
 	else:
-		direction = Vector2(randf_range(0,1), randf_range(0,1))
 		velocity = direction * 100
 		collision.disabled = true
 	move_and_slide()

@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://26hi5o1juxu2"]
+[gd_scene load_steps=8 format=3 uid="uid://26hi5o1juxu2"]
 
 [ext_resource type="Script" uid="uid://yqo0ywbp8ok2" path="res://scripts/player.gd" id="1_up26r"]
 [ext_resource type="Texture2D" uid="uid://rk2qlh0gguc0" path="res://Assets/SpaceShips/Ship_4.png" id="2_s8x6l"]
 [ext_resource type="AudioStream" uid="uid://b2hnf7uqkmv45" path="res://Assets/sounds/pickup-sound.mp3" id="3_nbg1w"]
 [ext_resource type="AudioStream" uid="uid://4v7dcxo3yhra" path="res://Assets/sounds/keremThank.mp3" id="4_8xn7u"]
-[ext_resource type="Script" uid="uid://d20ohk485mxc4" path="res://scripts/orbital_pivot.gd" id="5_igb4g"]
-[ext_resource type="PackedScene" uid="uid://bapvh2dfts86g" path="res://Scenes/heavy_ball.tscn" id="6_hpbjr"]
 [ext_resource type="PackedScene" uid="uid://cdkbpywsj4nar" path="res://Scenes/particles/shock_wave.tscn" id="7_s8x6l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovn01"]
@@ -67,24 +65,6 @@ stream = ExtResource("4_8xn7u")
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
 zoom = Vector2(0.6, 0.6)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-z_index = -100
-offset_left = -2712.9631
-offset_top = -2778.5
-offset_right = -2365.5422
-offset_bottom = -2687.3284
-scale = Vector2(16.431158, 62.699104)
-color = Color(0, 0, 0, 1)
-
-[node name="OrbitalPivot" type="Node2D" parent="."]
-visible = false
-position = Vector2(5.9604645e-08, 0)
-script = ExtResource("5_igb4g")
-
-[node name="HeavyBall" parent="OrbitalPivot" instance=ExtResource("6_hpbjr")]
-position = Vector2(383, -368)
 
 [node name="ShockWave" parent="." instance=ExtResource("7_s8x6l")]
 unique_name_in_owner = true

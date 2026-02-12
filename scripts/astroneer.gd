@@ -1,12 +1,11 @@
 class_name Astroneer
 extends CharacterBody2D
 
-var help_text = ["help me!!", "", "", "i'm gonna die", ""]
+var help_text = ["save me!!", "", "", "help!", ""]
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var astroneer_says: Label = $Label
 @export var anim: AnimatedSprite2D
-
 
 var direction
 var spin_speed
@@ -28,6 +27,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-# 15 saniye doldugunda astronot olecek
 func _on_timer_timeout() -> void:
 	queue_free()

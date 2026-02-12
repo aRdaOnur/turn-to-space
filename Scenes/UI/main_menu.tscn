@@ -1,0 +1,281 @@
+[gd_scene load_steps=15 format=3 uid="uid://hcokq8fukj1j"]
+
+[ext_resource type="Script" uid="uid://dtev2k0o2orer" path="res://scripts/Ui_Scripts/main_menu.gd" id="1_gih0s"]
+[ext_resource type="Texture2D" uid="uid://bkfq63gj7bcqw" path="res://Assets/coin.png" id="1_u7lva"]
+[ext_resource type="FontFile" uid="uid://cg5lho1j110w6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_mrfpk"]
+[ext_resource type="Texture2D" uid="uid://cjkqbkuc8a6pe" path="res://Assets/Astroneers/astroneer-9.png" id="3_4pqbp"]
+[ext_resource type="Texture2D" uid="uid://x3e86h4qp2jb" path="res://Assets/iron.png" id="4_gih0s"]
+[ext_resource type="Texture2D" uid="uid://cleh6twolnwbi" path="res://Assets/SpaceShips/Ship_1.png" id="5_mrfpk"]
+[ext_resource type="PackedScene" uid="uid://baj5660ao7igj" path="res://Scenes/UI/ItemCard.tscn" id="6_4pqbp"]
+[ext_resource type="PackedScene" uid="uid://dfmbxirdsknv8" path="res://Scenes/astroneer.tscn" id="8_lrjdf"]
+[ext_resource type="Texture2D" uid="uid://xvx8c3ico7n8" path="res://Assets/star-Sheet.png" id="9_wqme5"]
+[ext_resource type="PackedScene" uid="uid://bpsgsu5tyu74h" path="res://Scenes/animations/gold_coin.tscn" id="10_wqme5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k33u3"]
+atlas = ExtResource("1_u7lva")
+region = Rect2(10.038065, 9.99851, 12.034811, 12.024696)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrjdf"]
+atlas = ExtResource("3_4pqbp")
+region = Rect2(2.5939274, 2.9991512, 18.377756, 21.000849)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqme5"]
+atlas = ExtResource("4_gih0s")
+region = Rect2(7.9835725, 9.949892, 16.07535, 12.070719)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrfpk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gih0s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Assets" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Coin" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="CoinTexture" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Coin"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_k33u3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Coin"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 26
+text = "1231231"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Astroneer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Astroneer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = SubResource("AtlasTexture_lrjdf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AstroneerLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Astroneer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 26
+text = "12123"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Iron" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Iron"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_wqme5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="IronLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Assets/Iron"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 26
+text = "1231212"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 45
+text = "123"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameName" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 40
+text = "Turn To Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer5" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShipTexture" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("5_mrfpk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spacer3" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mrfpk")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_mrfpk")
+text = "START"
+
+[node name="Spacer4" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarketPlace" type="GridContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Ship" parent="CanvasLayer/MarginContainer/VBoxContainer/MarketPlace" instance=ExtResource("6_4pqbp")]
+layout_mode = 2
+
+[node name="SecondWeapon" parent="CanvasLayer/MarginContainer/VBoxContainer/MarketPlace" instance=ExtResource("6_4pqbp")]
+layout_mode = 2
+
+[node name="ThirdWeapon" parent="CanvasLayer/MarginContainer/VBoxContainer/MarketPlace" instance=ExtResource("6_4pqbp")]
+layout_mode = 2
+
+[node name="Bullet" parent="CanvasLayer/MarginContainer/VBoxContainer/MarketPlace" instance=ExtResource("6_4pqbp")]
+layout_mode = 2
+
+[node name="Astroneers" type="Node2D" parent="."]
+
+[node name="Astroneer" parent="Astroneers" instance=ExtResource("8_lrjdf")]
+position = Vector2(97, 465)
+
+[node name="Astroneer2" parent="Astroneers" instance=ExtResource("8_lrjdf")]
+position = Vector2(59, 738)
+
+[node name="Astroneer3" parent="Astroneers" instance=ExtResource("8_lrjdf")]
+position = Vector2(525, 431)
+
+[node name="Astroneer4" parent="Astroneers" instance=ExtResource("8_lrjdf")]
+position = Vector2(612, 655)
+
+[node name="Astroneer5" parent="Astroneers" instance=ExtResource("8_lrjdf")]
+position = Vector2(235, 264)
+rotation = -0.6740936
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="StarSheet2" type="Sprite2D" parent="Stars"]
+position = Vector2(668, 237)
+rotation = 0.00022878198
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet15" type="Sprite2D" parent="Stars"]
+position = Vector2(672, 798)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet3" type="Sprite2D" parent="Stars"]
+position = Vector2(258, 669)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet13" type="Sprite2D" parent="Stars"]
+position = Vector2(72.99997, 275)
+rotation = -0.07921014
+scale = Vector2(1.5099384, 1.5099384)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet5" type="Sprite2D" parent="Stars"]
+position = Vector2(107, 567)
+scale = Vector2(1.4173375, 1.4173375)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet6" type="Sprite2D" parent="Stars"]
+position = Vector2(644, 418)
+scale = Vector2(0.8905317, 0.8905317)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet8" type="Sprite2D" parent="Stars"]
+position = Vector2(549, 221)
+scale = Vector2(0.8482296, 0.8482296)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet9" type="Sprite2D" parent="Stars"]
+position = Vector2(29, 357)
+scale = Vector2(1.4173375, 1.4173375)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet11" type="Sprite2D" parent="Stars"]
+position = Vector2(161, 823)
+scale = Vector2(1.4173375, 1.4173375)
+texture = ExtResource("9_wqme5")
+
+[node name="StarSheet12" type="Sprite2D" parent="Stars"]
+position = Vector2(358, 860)
+scale = Vector2(1.4173375, 1.4173375)
+texture = ExtResource("9_wqme5")
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("10_wqme5")]
+position = Vector2(219, 528)
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("10_wqme5")]
+position = Vector2(550, 730)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("10_wqme5")]
+position = Vector2(454, 262)
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource("10_wqme5")]
+position = Vector2(173.99997, 274)

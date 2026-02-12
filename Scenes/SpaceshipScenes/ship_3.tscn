@@ -45,15 +45,6 @@ stream = ExtResource("4_2hvok")
 unique_name_in_owner = true
 zoom = Vector2(0.6, 0.6)
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -2
-offset_left = -3543.0
-offset_top = -3445.0
-offset_right = -3048.6987
-offset_bottom = -3314.6187
-scale = Vector2(14.371807, 52.137524)
-color = Color(0, 0, 0, 1)
-
 [node name="HealthBarContainer" type="Node2D" parent="."]
 unique_name_in_owner = true
 

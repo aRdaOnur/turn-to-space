@@ -569,6 +569,42 @@ position = Vector2(530, 257)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("7_cp0ys")
 
+[node name="StarSheet11" type="Sprite2D" parent="Stars"]
+position = Vector2(666, 208)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet12" type="Sprite2D" parent="Stars"]
+position = Vector2(44.00006, 545)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet13" type="Sprite2D" parent="Stars"]
+position = Vector2(238.99998, 801)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet14" type="Sprite2D" parent="Stars"]
+position = Vector2(388, 793)
+scale = Vector2(1.3375742, 1.3375742)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet15" type="Sprite2D" parent="Stars"]
+position = Vector2(46.000004, 32.000015)
+scale = Vector2(1.03299, 1.03299)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet16" type="Sprite2D" parent="Stars"]
+position = Vector2(38.000023, 1168)
+scale = Vector2(1.03299, 1.03299)
+texture = ExtResource("7_cp0ys")
+
+[node name="StarSheet17" type="Sprite2D" parent="Stars"]
+position = Vector2(316.99997, 1173.0001)
+rotation = -0.6436253
+scale = Vector2(1.0340569, 1.0340569)
+texture = ExtResource("7_cp0ys")
+
 [node name="StarSheet6" type="Sprite2D" parent="Stars"]
 position = Vector2(234, 130)
 scale = Vector2(0.7, 0.7)
